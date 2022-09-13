@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="l-col-right ticket-wrap">
+        <div class="ticket" aria-hidden="true">
+            <div class="ticket__header">
+                <div class="ticket__co">
+                    <span id="title" class="ticket__co-name"></span>
+                    <span class="u-upper ticket__co-subname"></span>
+                </div>
+            </div>
+            <div class="ticket__body">
+                <p>WHERE</p>
+                <p class="ticket__route" id="location"></p>
+                <p class="ticket__description"></p>
+                <div class="ticket__timing">
+                    <p>
+                        <p></p>
+                        <span id="date" class="u-upper ticket__small-label"></span>
+                        <p></p>
+                        <p></p>
+                        <span class="ticket__detail"></span>
+                    </p>
+                    <p>
+                        <span id="title" class="u-upper ticket__small-label"></span>
+                        <span class="ticket__detail"></span>
+                    </p>
+                    <p>
+                        <span class="u-upper ticket__small-label" id="time"></span>
+                        <span class="ticket__detail"></span>
+                    </p>
+                </div>
+                <p class="ticket__fine-print"></p>
+                <br> <br> <br> <br> <br>
+                <img class="ticket__barcode" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/515428/barcode.png" alt="Fake barcode" />
+                <p class="u-upper ticket__admit"> Ticket nr: <span id="unique"></span> </p>
+            </div>
+        </div>
+    </div>
+    <script src="./ticket.js"></script>
+    <style>
+        body {
+            background-color:rgb(38, 9, 68);
+            color: #657990;
+        }
+        
+        .ticket-wrap {
+            text-align: center;
+        }
+
+        .line{
+            border-right: 2px solid #9facbc;
+        }
+        
+        .ticket {
+            display: inline-block;
+            margin: 0 auto;
+            border: 2px solid #9facbc;
+            font-family: "Variable Bahnschrift", "FF DIN", "Franklin Gothic", "Helvetica Neue", sans-serif;
+            font-feature-settings: "kern" 1;
+            background: #fff;
+        }
+        
+        .ticket__header {
+            margin: 0;
+            padding: 1.5em;
+            background: #f4f5f6;
+        }
+        
+        .ticket__co span,
+        .ticket__route span {
+            display: inline;
+        }
+        
+        .ticket__co {
+            display: inline-block;
+            position: relative;
+            padding-left: 5em;
+            line-height: 1;
+            color: #5e7186;
+        }
+        
+        .ticket__co-icon {
+            position: absolute;
+            top: 50%;
+            margin-top: -2em;
+            left: 0;
+            width: 4em;
+            height: auto;
+        }
+        
+        .ticket__co-name {
+            margin-right: 70px;
+            font-size: 2.5em;
+            font-variation-settings: "wght" 500, "wdth" 75;
+            letter-spacing: -.01em;
+        }
+        
+        .ticket__co-subname {
+            font-variation-settings: "wght" 700;
+            color: #506072;
+        }
+        
+        .ticket__body {
+            padding: 1rem 1.25em 1.25em;
+        }
+        
+        .ticket__route {
+            font-variation-settings: "wght" 300;
+            font-size: 2em;
+            line-height: 1.1;
+        }
+        
+        .ticket__description {
+            margin-top: .5em;
+            font-variation-settings: "wght" 350;
+            font-size: 1.125em;
+            color: #506072;
+        }
+        
+        .ticket__timing {
+            display: flex;
+            align-items: center;
+            margin-top: 1rem;
+            padding: 1rem 0;
+            border-top: 2px solid #9facbc;
+            border-bottom: 2px solid #9facbc;
+            text-align: left;
+            font-size: 19px;
+        }
+        
+        .ticket__timing p {
+            margin: 0 1rem 0 0;
+            padding-right: 1rem;
+            line-height: 1;
+            
+        }
+        
+        .ticket__timing p:last-child {
+            margin: 0;
+            padding: 0;
+            border-right: 0;
+        }
+        
+        .ticket__small-label {
+            display: block;
+            margin-bottom: .5em;
+            font-variation-settings: "wght" 300;
+            font-size: .875em;
+            color: #506072;
+        }
+        
+        .ticket__detail {
+            font-variation-settings: "wght" 700;
+            font-size: 1.25em;
+            color: #424f5e;
+        }
+        
+        .ticket__admit {
+            font-size: 2.5em;
+            font-variation-settings: "wght" 700, "wdth" 85;
+            line-height: 1;
+            font-size: 24px;
+        }
+        
+        .ticket__fine-print {
+            margin-top: 1rem;
+            font-variation-settings: "wdth" 75;
+            color: #666;
+        }
+        
+        .ticket__barcode {
+            margin-top: 1.25em;
+            width: 400px;
+            height: 130px;
+            max-width: 100%;
+        }
+        
+        @media (min-width: 36em) {
+            .ticket-wrap {
+                margin-bottom: 4em;
+                text-align: center;
+            }
+            .ticket__header {
+                margin: 0;
+                padding: 2em;
+            }
+            .ticket__body {
+                padding: 2rem 2em 2em;
+            }
+            .ticket__detail {
+                font-size: 1.75em;
+            }
+            .ticket__admit {
+                margin-top: 2rem;
+            }
+        }
+        
+        @supports (display: grid) {
+            @media (min-width: 72em) {
+                .ticket-info, .ticket-wrap {
+                    align-self: center;
+                }
+                .ticket-wrap {
+                    order: 2;
+                    margin-bottom: 0;
+                }
+                .ticket-info {
+                    order: 1;
+                }
+            }
+        }
+    </style>
+
+
+</body>
+
+</html>

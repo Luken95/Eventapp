@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Events</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <button type="button" id="staffButton" onclick="window.location.href='login.html'">Logga in</button>
+    <button id="create-button">Skapa konto</button>
+    <button id="login-button">Logga in</button>
+    <h1>Events</h1>
+
+</head>
+
+<body>
+    <section id="concerts-container"></section>
+
+
+    <script src="./index.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        #ticket1 {
+            padding: 20px;
+            text-align: center;
+            display: inline-block;
+            width: 900px;
+            height: 200px;
+            margin: 10px;
+            border-radius: 10px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+        
+        #ticket2 {
+            padding: 20px;
+            text-align: center;
+            display: inline-block;
+            width: 900px;
+            height: 200px;
+            margin: 10px;
+            border-radius: 10px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+        
+        #ticket3 {
+            padding: 20px;
+            text-align: center;
+            display: inline-block;
+            width: 900px;
+            height: 200px;
+            margin: 10px;
+            border-radius: 10px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+        
+        #ticket4 {
+            padding: 20px;
+            text-align: center;
+            display: inline-block;
+            width: 900px;
+            height: 200px;
+            margin: 10px;
+            border-radius: 10px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+        
+        #date {
+            display: flex;
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 30px;
+            margin-top: -75px;
+            top: 10px;
+            /* border: 2px solid #FFFFFF; */
+        }
+        
+        #pris {
+            display: flex;
+            float: right;
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 30px;
+            margin-top: -1px;
+            top: 10px;
+        }
+        
+        h3 {
+            font-size: 30px;
+            margin-top: 1px;
+        }
+        
+        body {
+            font-family: Arial;
+            margin: 0;
+            background-color: rgb(38, 9, 68);
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        
+        #concerts-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #concerts-container article {
+            border: 1px solid white;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #F56B9A;
+            font-weight: 600;
+            Font-size: 42px;
+        }
+
+        #create-button{
+            visibility: hidden;
+        }
+       
+        #login-button {
+            visibility: hidden;
+       }
+        
+        #staffButton {
+            position: absolute;
+            background-color: initial;
+            background-image: linear-gradient(rgba(179, 132, 201, .84), rgba(57, 31, 91, .84) 50%);
+            border-radius: 42px;
+            border-width: 0;
+            box-shadow: rgba(57, 31, 91, 0.24) 0 2px 2px, rgba(179, 132, 201, 0.4) 0 8px 12px;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-family: Quicksand, sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            justify-content: center;
+            letter-spacing: .04em;
+            line-height: 16px;
+            margin: 0;
+            margin-top: 25px;
+            padding: 18px 18px;
+            text-align: center;
+            text-decoration: none;
+            text-shadow: rgba(255, 255, 255, 0.4) 0 0 4px, rgba(255, 255, 255, 0.2) 0 0 12px, rgba(57, 31, 91, 0.6) 1px 1px 4px, rgba(57, 31, 91, 0.32) 4px 4px 16px;
+            touch-action: manipulation;
+            vertical-align: baseline;
+            right: 50px;
+        }
+    </style>
+
+</body>
+
+</html>
